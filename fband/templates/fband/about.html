@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f7f7f7;
+            font-family: 'One Piece', sans-serif;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h2 {
+            color: #e74c3c;
+        }
+        p {
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        strong {
+            color: #e74c3c;
+        }
+        .about-nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .about-nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #e74c3c;
+            border: 2px solid #e74c3c;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+        .about-nav a:hover {
+            background-color: #c0392b;
+            border-color: #c0392b;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=One+Piece&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container" style="background-color: #fff8eb;">
+        <h2>About Us</h2>
+        <p>Welcome to The Straw Hats Band! We're a tight-knit group of musical artists sailing the New World.</p>
+        <p><strong>Luffy - The Fearless Frontman</strong></p>
+        <p>Luffy's energetic vocals and powerful stage presence make him the heart and soul of our performances.</p>
+        <p><strong>Zoro - The Guitar Virtuoso</strong></p>
+        <p>Zoro's guitar skills rival his swordsmanship, mesmerizing the audience with heart-wrenching solos and fierce riffs.</p>
+        <p><strong>Nami - The Melodic Navigator</strong></p>
+        <p>Nami's enchanting voice guides us through uncharted musical territories, captivating audiences like a stormy sea.</p>
+        <p><strong>Usopp - The Master Showman</strong></p>
+        <p>Usopp's whimsical instruments and storytelling lyrics bring magic to our performances, ensuring unforgettable moments.</p>
+        <p><strong>Sanji - The Smooth Crooner</strong></p>
+        <p>Sanji's velvety voice and soulful ballads add romance, creating an atmosphere of warmth and connection.</p>
+        <p><strong>Chopper - The Energetic Drummer</strong></p>
+        <p>Chopper's infectious beats infuse energy, compelling the crowd to dance along to the rhythm.</p>
+        <p><strong>Robin - The Versatile Pianist</strong></p>
+        <p>Robin's piano melodies blend complexity and emotion, creating harmonious compositions that reflect her curiosity.</p>
+        <p><strong>Franky - The Electric Bass Maestro</strong></p>
+        <p>Franky's bass lines pulse with power, driving the groove that resonates with the crowd's hearts.</p>
+        <p><strong>Brook - The Soulful Saxophonist</strong></p>
+        <p>Brook's saxophone solos evoke nostalgia, his soulful voice echoing through time, enriching our music.</p>
+        <!-- ... (content for other band members) ... -->
+        <p><strong>Jinbei - The Tropical Percussionist</strong></p>
+        <p>Jinbei's rhythmic beats infuse tropical vibes, turning our performances into beach party celebrations.</p>
+        <p>As we navigate the New World, our music spreads joy, inspiration, and unity. Join us on our musical journey!</p>
+    </div>
+    
+    <div class="about-nav">
+        <a href="{% url 'homepage' %}">Back to Homepage</a>
+        <a href="{% url 'contact' %}">Contact Us</a>
+{% if user.is_authenticated %}
+        <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+{% endif %}
+
+    </div>
+</body>
+</html>

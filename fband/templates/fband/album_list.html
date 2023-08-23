@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albums</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Styling for the page -->
+    <style>
+        body {
+            background-color: #f7f7f7;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+        .album {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .album h3 {
+            color: #e74c3c; /* One Piece Red */
+        }
+        .album img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Albums</h2>
+        {% for album in albums %}
+        <div class="album">
+            <!-- Display album information -->
+            <h3>{{ album.title }}</h3>
+            <img src="{{ album.cover_image.url }}" alt="{{ album.title }} Cover">
+            <p>{{ album.description }}</p>
+        </div>
+        {% endfor %}
+        
+        <!-- Add buttons for navigation with One Piece color scheme -->
+        <div class="text-center mt-4">
+            <a href="{% url 'about' %}" class="btn btn-primary mx-2" style="background-color: #e74c3c; border-color: #e74c3c;">Learn More About Us</a>
+            <a href="{% url 'contact' %}" class="btn btn-primary mx-2" style="background-color: #3498db; border-color: #3498db;">Contact Us</a>
+            <a href="{% url 'homepage' %}" class="btn btn-primary mx-2" style="background-color: #1a5276; border-color: #1a5276;">Back to Homepage</a>
+            <!-- Display logout button if the user is authenticated -->
+            {% if user.is_authenticated %}
+                <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

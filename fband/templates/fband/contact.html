@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Styling for the page -->
+    <style>
+        body {
+            background-color: #f7f7f7;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+        .btn-primary {
+            background-color: #e74c3c;
+            border-color: #e74c3c;
+        }
+        .btn-primary:hover {
+            background-color: #c0392b;
+            border-color: #c0392b;
+        }
+        .contact-page {
+            background-color: #3498db; /* One Piece Blue */
+            color: #ffffff; /* White text on blue background */
+            padding: 40px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="contact-page">
+            <h2>Contact Us</h2>
+            <p>Feel free to get in touch with us using the contact information below:</p>
+            <ul>
+                <li>Email: MonkeyDLuffy@grandline.com</li>
+                <li>Phone: (012) 456-7890</li>
+            </ul>
+            
+            <!-- Add more contact information or a contact form here -->
+            
+            <!-- Navigation links to other pages -->
+            <div class="text-center mt-4">
+                <a href="{% url 'album_list' %}" class="btn btn-primary mx-2">Back to Albums</a>
+                <a href="{% url 'homepage' %}" class="btn btn-primary mx-2">Back to Homepage</a>
+                <a href="{% url 'about' %}" class="btn btn-primary mx-2">Learn More About Us</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

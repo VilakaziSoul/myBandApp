@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logged Out</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Styling for the page -->
+  <style>
+    body {
+      background-color: #457B9D;
+    }
+    .container {
+      margin-top: 100px;
+      text-align: center;
+      color: white;
+    }
+    .btn-primary {
+      background-color: #E63946;
+      border-color: #E63946;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Logged Out</h2>
+    <p>You have been successfully logged out.</p>
+    <a href="{% url 'home' %}" class="btn btn-primary mt-3">Home</a>
+  </div>
+</body>
+</html>
